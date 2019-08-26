@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Todo from './components/Todo'
+import TodoList from './components/TodoList'
+const todos = [{ text: "Learn React", priority: 5, dueDate: new Date() },
+{ text: "Learn about APIs", priority: 4, dueDate: new Date(2018, 8, 30) },
+{ text: "write TODO App", priority: 3, dueDate: new Date(2018, 9, 30) }];
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+ReactDOM.render(<TodoList todoList={todos}/>, document.getElementById('root'));
+
+
+
+
+
